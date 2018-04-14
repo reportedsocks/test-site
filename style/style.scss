@@ -1,0 +1,133 @@
+$font-family:'Roboto', sans-serif;
+@mixin media576{
+	@media only screen and (max-width:576px){
+		@content;
+	}
+}
+body{
+	background-color: #ededed;
+}
+.header{
+	background-color: #3e3e3e;
+	opacity: 0.9;
+	padding-top:3px;
+	padding-bottom:3px;
+	border-radius: 3px;
+	box-shadow: 5px 5px 10px #494848;
+	
+	font-family: $font-family;
+	color: white;
+	font-size: 17px;
+	h3{
+		margin: 0;
+	}
+}
+.sidebar-bttn{
+	border-radius: 4px;
+	border: 2px white solid;
+	outline: none;
+	color: white;
+	background-color: #121212;
+	opacity: 0.8;
+	padding: 3px 8px;
+	&:hover{
+		outline: none;
+		opacity: 0.9;
+		background-color: #535353;
+	}
+	&:focus{
+		outline: none;
+		opacity: 0.9;
+		font-weight: bold;
+	}
+	@include media576 {
+		padding: 3px 5px;
+	}
+}
+.main-container{
+	background-color: #717171;
+	padding-top:20px;
+	padding-bottom:20px;
+	margin-top: 60px;
+	border-radius: 3px;
+	box-shadow: 5px 5px 10px #494848;
+	
+	font-family: $font-family;
+	color: white;
+	font-size: 17px;
+}
+.sticky{
+	top:50px;
+	border: 2px #3b3b3b solid;
+	background-color: #575757;
+	border-radius: 4px;
+	padding: 10px 20px;
+	box-shadow: 5px 5px 20px #494848;
+	z-index: 5;
+	font-style: italic;
+}
+.footer{
+	background-color: #717171;
+	padding-top:15px;
+	padding-bottom:15px;
+	margin-top: 10px;
+	border-radius: 3px;
+	box-shadow: 5px 5px 10px #494848;
+	
+	font-family: $font-family;
+	color: white;
+	font-size: 20px;
+	p{
+		margin: 0;
+	}
+}
+.sidebar-container{
+	width:100%;
+	margin: 0 auto;
+	position: relative;
+	
+}
+.left-sidebar{
+	width:300px;
+	position: fixed;
+	top:60px;
+	left:0;
+	z-index: 11;
+	opacity:0;
+	border-radius: 2px;
+	background-color: #363434;
+	color: white;
+	font-family: $font-family;
+	font-size: 22px;
+	padding:30px 20px;
+	box-shadow: 8px 8px 15px  #494848;
+}
+.right-sidebar{
+	width:300px;
+	position: fixed;
+	top:60px;
+	right: 0;
+	z-index: 11;
+	opacity:0;
+	border-radius: 2px;
+	background-color: #363434;
+	color: white;
+	font-family: $font-family;
+	font-size: 22px;
+	padding:30px 20px;
+	box-shadow: 8px 8px 15px  #494848;
+
+}
+.sidebar-menu{
+	div{
+		background-color: #676161;
+		padding: 5px 15px;
+		margin-top: 25px;
+		border-radius: 5px;
+		border: 2px solid #676161;
+		&:hover{
+			background-color: #7a7676;
+			border: 2px solid #d4cdcd;
+		}
+	}
+}
